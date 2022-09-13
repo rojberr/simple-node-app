@@ -1,0 +1,11 @@
+stages:
+  - simple-node-app:install
+
+install simple-node-app:
+  stage: simple-node-app:install
+  image: node:16.17
+  cache:
+    paths:
+      - node_modules/
+    script:
+      - npm install
